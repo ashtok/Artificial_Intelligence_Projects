@@ -4,7 +4,7 @@ import torch
 from typing import List, Dict
 
 class ConversationalChatbot:
-    def __init__(self, model_name: str = "google/gemma-2-2b-it" ):
+    def __init__(self, model_name: str = "TinyLlama/TinyLlama-1.1B-Chat-v1.0" ):
         self.history: List[Dict] = []
         self.system_instruction: str = "You are a helpful and professional assistant"
         self.model_name = model_name
@@ -20,9 +20,10 @@ class ConversationalChatbot:
         llm = LLM(
         model=self.model_name,
         max_model_len=2048,
+        gpu_memory_utilization=0.75,  # Changed from 0.9 to 0.75
         enforce_eager=True,
         trust_remote_code=True
-        )
+    )
         
         if progress_callback:
             progress_callback(100, "Model ready!")
