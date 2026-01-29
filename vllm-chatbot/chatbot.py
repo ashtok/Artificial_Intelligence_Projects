@@ -4,23 +4,32 @@ import torch
 from typing import List, Dict
 
 class ConversationalChatbot:
-    def __init__(self, model_name: str = "meta-llama/Meta-Llama-3.1-8B-Instruct" ):
+    def __init__(self, model_name: str = "google/gemma-2-2b-it" ):
         self.history: List[Dict] = []
         self.system_instruction: str = "You are a helpful and professional assistant"
         self.model_name = model_name
         self.llm = self.load_model()
     
-    def load_model(self):
-        #Load vLLM with specific settings
-        print(f"Loading model: {self.model_name}")
-        llm = LLM(
-                model = self.model_name,
-                max_model_len = 4096,
-                gpu_utilization = 0.85
-                )
+    def load_model(self, progress_callback=None):
+        """Load vLLM model with progress tracking"""
+        print(f"Loading model {self.model_name}...")
         
-        print("Model Load Successful")
+        if progress_callback:
+            progress_callback(40, "Initializing vLLM engine...")
+        
+        llm = LLM(
+        model=self.model_name,
+        max_model_len=2048,
+        enforce_eager=True,
+        trust_remote_code=True
+        )
+        
+        if progress_callback:
+            progress_callback(100, "Model ready!")
+        
+        print("Model loaded successfully!")
         return llm
+
     
     def set_mode(self, mode: str):
         "Swtich between Modes"
