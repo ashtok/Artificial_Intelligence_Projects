@@ -42,6 +42,9 @@ if "chatbot" not in st.session_state:
     # Clear loading UI
     loading_placeholder.empty()
     st.session_state.messages = []
+    st.success("✅ Chatbot ready! Start chatting below.")
+    time.sleep(1)
+    st.rerun()
 
 with st.sidebar:
     st.title("⚙️ Settings")
