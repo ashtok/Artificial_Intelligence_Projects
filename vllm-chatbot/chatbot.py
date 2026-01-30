@@ -67,7 +67,7 @@ class ConversationalChatbot:
         conversation = self.construct_prompt(user_input)
         bot_response = self.generate_response(conversation, **kwargs)
         self.history.append({"role": "user", "content": user_input})
-        self.history.append({"role": "assistant", "content": user_input})
+        self.history.append({"role": "assistant", "content": bot_response})
 
         return bot_response
     
