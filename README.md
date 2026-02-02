@@ -2,3 +2,4 @@
 1. Sentiment Analysis
 2. Chatbot using vLLM
 3. Rag Agent
+4. Inventory GPT
