@@ -4,3 +4,5 @@
 3. Rag Agent
 4. Inventory GPT
 5. Fast API CRUD
+
+RAG using LlamaIndex
