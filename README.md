@@ -5,5 +5,5 @@
 4. Inventory GPT
 5. Fast API CRUD
 
-# TODO
+## TODO
 RAG using LlamaIndex
