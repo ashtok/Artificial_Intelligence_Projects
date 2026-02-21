@@ -6,4 +6,4 @@
 5. Fast API CRUD
 
 ## TODO
-RAG using LlamaIndex
+1. RAG using LlamaIndex 
