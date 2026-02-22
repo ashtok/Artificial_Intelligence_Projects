@@ -5,6 +5,6 @@
 4. Inventory GPT
 5. Fast API CRUD
 
-## TODO
+# TODO
 1. RAG using LlamaIndex
 2. Research Paper Summaries on given topic
