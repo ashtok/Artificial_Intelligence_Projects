@@ -7,4 +7,4 @@
 
 ## TODO
 1. RAG using LlamaIndex
-2. Research Paper Summaries
+2. Research Paper Summaries on given topic
