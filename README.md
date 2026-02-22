@@ -6,4 +6,5 @@
 5. Fast API CRUD
 
 ## TODO
-1. RAG using LlamaIndex 
+1. RAG using LlamaIndex
+2. Research Paper Summaries
